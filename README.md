@@ -7,7 +7,8 @@ A URL shortener takes some long, unwieldy link and turns it into a shorter link,
   - Output: https://shrtco.de/qTsuEz
    
   
-##### Table of Contents
+## Table of Contents
+___
 - [Introduction](#Introduction)  
 - [Getting Started](#Getting-Started)  
 - [Tech Stack](#Tech-Stack)
