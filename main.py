@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 import requests
+from database import Database
 
 app = Flask(__name__)
 
@@ -26,6 +27,9 @@ def shortner():
                         "url": url_id,
                         "user_ip": user_ip
                         }
+
+                # insertion query
+                Database().insertion(data)
 
                 result = requests.get(f"https://api.shrtco.de/v2/shorten?url={url}").json()
                 shorten_url = result.get('result').get('full_short_link')
