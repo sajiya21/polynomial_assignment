@@ -45,10 +45,15 @@ def shortner():
 
 @app.route('/video', methods =["GET", "POST"])
 def video():
-
     latest_url, entire_data = Database().search()
 
     return render_template("video.html", latest_url=latest_url)
+
+
+@app.route('/track', methods =["GET", "POST"])
+def track():
+    latest_url, entire_data = Database().search()
+    return render_template('track.html', data=entire_data)
 
 
 if __name__ == '__main__':
