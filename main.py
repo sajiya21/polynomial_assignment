@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from datetime import datetime
+from security import url_encrypt, url_decrypt
 import requests
 from database import Database
 
@@ -18,7 +19,7 @@ def shortner():
         if url == "":
             return "error"
         else:
-            if key == None:
+            if key is None:
                 user_ip = request.remote_addr
                 url_id = url.split("/")[3].replace("watch?v=", '')
 
@@ -36,8 +37,8 @@ def shortner():
 
                 return f"Your short url is {str(shorten_url)}"
             else:
-                str_encoded = (url, key)
-                str_decoded = (url, key)
+                str_encoded = url_encrypt(url, key)
+                str_decoded = url_decrypt(url, key)
                 return f"{str_encoded},  {str_decoded}"
 
     return render_template("index.html")
@@ -46,7 +47,6 @@ def shortner():
 @app.route('/video', methods =["GET", "POST"])
 def video():
     latest_url, entire_data = Database().search()
-
     return render_template("video.html", latest_url=latest_url)
 
 
