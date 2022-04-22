@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from datetime import datetime
 from security import url_encrypt, url_decrypt
 import requests
+import socket
 from database import Database
 
 app = Flask(__name__)
@@ -20,7 +21,11 @@ def shortner():
             return "error"
         else:
             if key is None:
-                user_ip = request.remote_addr
+                # user_ip = request.remote_addr
+
+                hostname = socket.gethostname()
+                user_ip = socket.gethostbyname(hostname)
+
                 url_id = url.split("/")[3].replace("watch?v=", '')
 
                 # inserting into database
@@ -53,6 +58,7 @@ def video():
 @app.route('/track', methods =["GET", "POST"])
 def track():
     latest_url, entire_data = Database().search()
+    entire_data.reverse()
     return render_template('track.html', data=entire_data)
 
 
