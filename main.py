@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from datetime import datetime
+import requests
 
 app = Flask(__name__)
 
@@ -26,7 +27,10 @@ def shortner():
                         "user_ip": user_ip
                         }
 
-                return f"Your short url is {str(url)}"
+                result = requests.get(f"https://api.shrtco.de/v2/shorten?url={url}").json()
+                shorten_url = result.get('result').get('full_short_link')
+
+                return f"Your short url is {str(shorten_url)}"
             else:
                 str_encoded = (url, key)
                 str_decoded = (url, key)
