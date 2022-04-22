@@ -43,3 +43,25 @@ You can install above packages using following command:
 
 Or you can install from source with:
 > $ pip install requirements.txt
+
+## Project Structure
+```
+|   main.py
+|   Procfile
+|   README.md
+|   requirements.txt
++---static
+|   +---css
+|   |       main_table.css
+|   |       style.css
+|   +---fonts
+|   |       font-awesome-4.7.0
+|   |       OpenSans         
++---templates
+|       index.html
+|       track.html
+|       video.html
++---Utils
+|       database.py
+|       security.py
+```

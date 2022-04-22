@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 from datetime import datetime
-from security import url_encrypt, url_decrypt
+from Utils.security import url_encrypt, url_decrypt
 import requests
 import socket
-from database import Database
+from Utils.database import Database
 
 app = Flask(__name__)
 
