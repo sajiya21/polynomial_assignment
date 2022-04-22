@@ -43,5 +43,13 @@ def shortner():
     return render_template("index.html")
 
 
+@app.route('/video', methods =["GET", "POST"])
+def video():
+
+    latest_url, entire_data = Database().search()
+
+    return render_template("video.html", latest_url=latest_url)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
