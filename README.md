@@ -12,7 +12,7 @@ A URL shortener takes some long, unwieldy link and turns it into a shorter link,
 - [Introduction](#Introduction)  
 - [Getting Started](#Getting-Started)  
 - [Tech Stack](#Tech-Stack)
-- [Installation](Installation)
+- [Installation](#Installation)
     
 
 ## Introduction
