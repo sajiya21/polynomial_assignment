@@ -35,7 +35,7 @@ def shortner():
 
             return f"Your short url is {str(shorten_url)}"
 
-        if request.form['submit_button'] == 'submit_encrypt':
+        elif request.form['submit_button'] == 'submit_encrypt':
             url = request.form.get("url_input")
             key = request.form.get("key_input")
 
@@ -43,7 +43,7 @@ def shortner():
 
             return f"Encrypted url: {str_encoded}"
 
-        if request.form['submit_button'] == 'submit_decrypt':
+        elif request.form['submit_button'] == 'submit_decrypt':
             url = request.form.get("url_input")
             key = request.form.get("key_input")
 
