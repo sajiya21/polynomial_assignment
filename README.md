@@ -5,14 +5,17 @@ A URL shortener takes some long, unwieldy link and turns it into a shorter link,
 - For example:
   - Input: https://youtu.be/Li0Abz-KT78
   - Output: https://shrtco.de/qTsuEz
-   
-  
+
+## Deployment URL
+- http://polynomial-assignment.herokuapp.com/
+
 ## Table of Contents
 
 - [Introduction](#Introduction)  
 - [Getting Started](#Getting-Started)  
 - [Tech Stack](#Tech-Stack)
 - [Installation](#Installation)
+- [Project Structure](#Project-Structure)
     
 
 ## Introduction
@@ -54,6 +57,7 @@ Or you can install from source with:
 |   +---css
 |   |       main_table.css
 |   |       style.css
+|   |       result.css
 |   +---fonts
 |   |       font-awesome-4.7.0
 |   |       OpenSans         
@@ -61,7 +65,10 @@ Or you can install from source with:
 |       index.html
 |       track.html
 |       video.html
+|       result.html
 +---Utils
 |       database.py
 |       security.py
 ```
+
+## Features
