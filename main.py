@@ -33,7 +33,9 @@ def shortner():
             result = requests.get(f"https://api.shrtco.de/v2/shorten?url={url}").json()
             shorten_url = result.get('result').get('full_short_link')
 
-            return f"Your short url is {str(shorten_url)}"
+            # return f"Your short url is {str(shorten_url)}"
+
+            return render_template("result.html", url=str(shorten_url), query_type="Short URL")
 
         elif request.form['submit_button'] == 'submit_encrypt':
             url = request.form.get("url_input")
@@ -41,7 +43,7 @@ def shortner():
 
             str_encoded = url_encrypt(url, key)
 
-            return f"Encrypted url: {str_encoded}"
+            return render_template("result.html", url=str(str_encoded), query_type="Encrypted URL")
 
         elif request.form['submit_button'] == 'submit_decrypt':
             url = request.form.get("url_input")
@@ -52,7 +54,7 @@ def shortner():
             if str_decoded is False:
                 str_decoded = "Invalid Credentials"
 
-            return f"Decrypted url: {str_decoded}"
+            return render_template("result.html", url=str(str_decoded), query_type="Decrypted URL")
 
     return render_template("index.html")
 
