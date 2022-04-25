@@ -1,6 +1,6 @@
 # Shortify
 
-A URL shortener takes some long, unwieldy link and turns it into a shorter link, one that's easy to share.
+A URL shortener takes Youtube long, unwieldy link and turns it into a shorter link, one that's easy to share.
 
 - For example:
   - Input: https://youtu.be/Li0Abz-KT78
@@ -16,7 +16,12 @@ A URL shortener takes some long, unwieldy link and turns it into a shorter link,
 - [Tech Stack](#Tech-Stack)
 - [Installation](#Installation)
 - [Project Structure](#Project-Structure)
-    
+- [Features](#Features)
+  - [URL Shortner](#URL-Shortner)
+  - [Encryption & Decryption](#Encryption-&-Decryption)
+  - [Recent Video](#Recent-Video)
+  - [Url Tracker](#Url-Tracker)
+ 
 
 ## Introduction
 
@@ -72,3 +77,25 @@ Or you can install from source with:
 ```
 
 ## Features
+
+### URL Shortner
+- link: http://polynomial-assignment.herokuapp.com/
+
+https://user-images.githubusercontent.com/83647604/165144416-245b23a3-4436-431e-9ba3-e02ac3523413.mov
+
+### Encryption & Decryption
+- link: http://polynomial-assignment.herokuapp.com/
+
+https://user-images.githubusercontent.com/83647604/165144615-4b5669b9-cbd4-4969-899f-529a9e81968c.mov
+
+### Recent Video
+- link: http://polynomial-assignment.herokuapp.com/video
+
+https://user-images.githubusercontent.com/83647604/165144697-59c92c8a-89c0-4bd3-8153-60f44b8c2d27.mov
+
+### Url Tracker
+- link: http://polynomial-assignment.herokuapp.com/track
+
+https://user-images.githubusercontent.com/83647604/165145014-f41ff9a8-e0c1-412b-9e44-00b89ca8db7d.mov
+
+
