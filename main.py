@@ -27,13 +27,11 @@ def shortner():
                     "user_ip": user_ip
                     }
 
-            # insertion query
-            Database().insertion(data)
-
             result = requests.get(f"https://api.shrtco.de/v2/shorten?url={url}").json()
             shorten_url = result.get('result').get('full_short_link')
 
-            # return f"Your short url is {str(shorten_url)}"
+            # insertion query
+            Database().insertion(data)
 
             return render_template("result.html", url=str(shorten_url), query_type="Short URL")
 
